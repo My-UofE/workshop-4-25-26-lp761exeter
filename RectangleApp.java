@@ -54,7 +54,7 @@ public class RectangleApp {
 		System.out.println( "myRect4 overlaps myRect6: " + overlapped(myRect4,myRect6)) ;
 		System.out.println( "myRect6 overlaps myRect4: " + overlapped(myRect4,myRect6)) ;
 
-		System.out.println("Check class prevents negative widths");
+		System.out.println("\nCheck class prevents negative widths");
 
 		// initialise rectangle for test
 		Rectangle myRect7 = new Rectangle(30.0, 5.0, 10, 10); 
@@ -67,6 +67,17 @@ public class RectangleApp {
 		// change to negative width should be ignored
 		myRect7.setWidth(-10);
 		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
+		Rectangle r1 = new Rectangle(10.0,5.0);
+		Rectangle r2 = new Rectangle(10.0,5.0);
+		Rectangle r3 = r2;
+		System.out.println("\nObject reference tests:");
+		System.out.println("r1: " + r1);
+		System.out.println("r2: " + r2);
+		System.out.println("r3: " + r3);
+		r2.scale(0.5);
+		System.out.println("r2 width: " + r2.getWidth());
+		System.out.println("r3 width: " + r3.getWidth());
 	}
 
 	public static boolean overlapped(Rectangle r1, Rectangle r2)

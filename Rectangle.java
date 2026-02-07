@@ -66,6 +66,11 @@ public class Rectangle {
     return width-height<epsilon;
   }
 
+  public String toString()
+  {
+    return "Rectangle[x="+originX+",y="+originY+",w="+width+",h="+height+"]";
+  }
+
   // getters
   public double getWidth()
   { 
@@ -103,4 +108,5 @@ public class Rectangle {
       height = h;
     }
   }
+
 }
