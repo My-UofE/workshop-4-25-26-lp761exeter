@@ -42,5 +42,29 @@ public class Rectangle {
   public double getPerimeter() {
     return 2 * (width + height);
   }
+
+  public void scale(double x, double y)
+  {
+    width*=x;
+    height*=y;
+  }
   
+  public void scale(double x)
+  {
+    width*=x;
+    height*=x;
+  }
+
+  public double calcRatio()
+  {
+    return width/height;
+  }
+
+  public boolean calcRatio()
+  {
+    w = double(int(width*1000))/1000
+    h = double(int(height*1000))/1000
+    return w==h
+  }
+
 }
