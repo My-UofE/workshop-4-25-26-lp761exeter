@@ -60,11 +60,10 @@ public class Rectangle {
     return width/height;
   }
 
-  public boolean calcRatio()
+  public boolean isSquare()
   {
-    w = double(int(width*1000))/1000
-    h = double(int(height*1000))/1000
-    return w==h
+    double epsilon = 0.001;
+    return width-height<epsilon;
   }
 
 }
